@@ -1,0 +1,57 @@
+version: '3'
+services:
+  cockroachdb:
+    container_name: cockroachdb
+    image: cockroachdb/cockroach:v19.2.5
+    command: start --insecure --store=attrs=ssd,path=/var/lib/cockroach/
+    restart: always
+    volumes:
+      - ./data/cockroach:/var/lib/cockroach
+    expose:
+      - "8080"
+      - "26257"
+    ports:
+      - "26257:26257"
+      - "8080:8080"
+
+  nakama:
+    container_name: nakama
+    image: heroiclabs/nakama:2.11.1
+    entrypoint:
+      - "/bin/sh"
+      - "-ecx"
+      - >
+          /nakama/nakama migrate up --database.address root@cockroachdb:26257 &&
+          exec /nakama/nakama --name nakama1 --database.address root@cockroachdb:26257 --config conf/config.yml
+    restart: always
+    links:
+      - "cockroachdb:db"
+    depends_on:
+      - cockroachdb
+    volumes:
+      - ./data:/nakama/data
+      - ./conf:/nakama/conf
+      - ./modules:/nakama/modules
+    ports:
+      - "7349:7349"
+      - "7350:7350"
+      - "7351:7351"
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:7350/"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  # web:
+  #   container_name: nginx
+  #   image: nginx
+  #   depends_on:
+  #     - nakama
+  #   volumes: 
+  #     - ./conf/:/etc/nginx
+  #   ports:
+  #     - "80:80"
+  #     - "7349:17349"
+  #     - "7350:17350"
+  #     - "7351:17351"
+  #   command: [nginx-debug, '-g', 'daemon off;']
