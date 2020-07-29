@@ -81,7 +81,7 @@ public class RegisterPopup : MonoBehaviour
             Debug.Log(emailText.text[i]);
         }
         Debug.Log("Register: " + emailText.text + ":" + passwordText.text + ":" + passwordText2.text);
-        nakama.Register(nameText.text, emailText.text, passwordText.text, PlayerGender.NULL);
+        nakama.Register(nameText.text, emailText.text, passwordText.text, PlayerGender.MALE);
     }
 
     void Close()

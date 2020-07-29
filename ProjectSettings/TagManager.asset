@@ -3,7 +3,11 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - init_not_synced
+  - init_synced
+  - local_player
+  - remote_player
   layers:
   - Default
   - TransparentFX

@@ -9,18 +9,16 @@ using System.IO;
 
 public class BuildPlayer
 {
-    static string project_name = "MyFirstNakamas";
+    static string project_name = "NWKH-Multiplayer-Core";
     static string out_dir = @"bin\";
 
     static string exe_name = out_dir + project_name + @".exe";
 
     static string[] scenes = new[] {
-            @"Assets\HappyMaki\Scenes\0-BootupScene.unity",
-            @"Assets\HappyMaki\Scenes\1-MainMenu.unity",
-            @"Assets\HappyMaki\Scenes\2-GlobalObjects.unity",
-            @"Assets\HappyMaki\Scenes\Lentils.unity",
-            @"Assets\HappyMaki\Scenes\Legume.unity",
-            @"Assets\HappyMaki\Scenes\Kerfuffle.unity"
+            @"Assets\_Scenes\_ServerDiscovery.unity",
+            @"Assets\_Scenes\_Login.unity",
+            @"Assets\_Scenes\_GlobalObjects.unity",
+            @"Assets\_Scenes\FirstScene.unity",
         };
 
     [MenuItem("Build/Development %b")]
