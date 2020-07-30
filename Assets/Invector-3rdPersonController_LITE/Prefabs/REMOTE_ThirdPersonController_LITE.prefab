@@ -271,7 +271,7 @@ GameObject:
   - component: {fileID: 4425428723088313496}
   m_Layer: 0
   m_Name: REMOTE_ThirdPersonController_LITE
-  m_TagString: Player
+  m_TagString: remote_player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

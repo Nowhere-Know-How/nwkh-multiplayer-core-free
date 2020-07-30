@@ -19,6 +19,7 @@ public class BuildPlayer
             @"Assets\_Scenes\_Login.unity",
             @"Assets\_Scenes\_GlobalObjects.unity",
             @"Assets\_Scenes\FirstScene.unity",
+            @"Assets\_Scenes\SecondScene.unity",
         };
 
     [MenuItem("Build/Development %b")]

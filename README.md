@@ -18,3 +18,4 @@ This code has external dependencies. Install these first by following the instru
 - Multiplayer Scene Changing
 - Persistent Scene Instancing
 - Logout
+- Player Location Save on Logout

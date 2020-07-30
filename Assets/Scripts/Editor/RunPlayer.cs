@@ -24,7 +24,7 @@ public class RunPlayer
     [MenuItem("Run/Client/Start Client %&3")]
     public static void StartClient()
     {
-        string server_stop_bat = @"/bin/MyFirstNakamas.exe";
+        string server_stop_bat = @"/bin/NWKH-Multiplayer-Core.exe";
         RunFile(server_stop_bat);
     }
 
