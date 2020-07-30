@@ -5,4 +5,13 @@
 </p>
 
 ## Dependencies
+
+This code has external dependencies on docker. Install docker for your system first by following the instructions below.
 - [Docker](https://www.docker.com/get-started)
+
+## Features
+- Server discovery
+- Register new accounts
+- Login to game with email and credentials
+- Multiplayer Movement
+- Logout
