@@ -14,4 +14,6 @@ This code has external dependencies on docker. Install docker for your system fi
 - Register new accounts
 - Login to game with email and credentials
 - Multiplayer Movement
+- Multiplayer Scene Changing
+- Persistent Scene Instancing
 - Logout
