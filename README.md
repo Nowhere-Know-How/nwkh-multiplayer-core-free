@@ -6,7 +6,8 @@
 
 ## Dependencies
 
-This code has external dependencies on docker. Install docker for your system first by following the instructions below.
+This code has external dependencies. Install these first by following the instructions in the links below.
+- [Unity](https://unity.com/)
 - [Docker](https://www.docker.com/get-started)
 
 ## Features
