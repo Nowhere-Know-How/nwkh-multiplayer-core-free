@@ -10,6 +10,15 @@ This code has external dependencies. Install these first by following the instru
 - [Unity](https://unity.com/)
 - [Docker](https://www.docker.com/get-started)
 
+## Instructions
+- Build -> Development
+- Run -> Server -> Start Server
+- Set Master Scene to server discovery scene from File -> Scene Autoload -> Select Master Scene
+- Click Play in editor
+- Open Build and Run Game
+- Create accounts
+- Log in
+
 ## Features
 - Server discovery
 - Register new accounts
