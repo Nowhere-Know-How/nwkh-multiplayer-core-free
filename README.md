@@ -31,7 +31,7 @@ This code has external dependencies. Install these first by following the instru
 
 ## Architecture
 <p align="center">
-    <img width="1159" height="686" src="Documentation/images/Architecture.png">
+    <img width="811" height="480" src="Documentation/images/Architecture.png">
 </p>
 
 ## Features
