@@ -19,6 +19,11 @@ This code has external dependencies. Install these first by following the instru
 - Create accounts
 - Log in
 
+## Architecture
+- Unity
+- Nakama
+- Vivox
+
 ## Features
 - Server discovery
 - Register new accounts

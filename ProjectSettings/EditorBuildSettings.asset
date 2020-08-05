@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/_Scenes/Dev/VivoxDemo.unity
+    guid: e42e5844b66d8c64b8bf6f4430c14395
+  - enabled: 1
     path: Assets/_Scenes/_ServerDiscovery.unity
     guid: baca5f04767b85d43ad119600741f23b
   - enabled: 1

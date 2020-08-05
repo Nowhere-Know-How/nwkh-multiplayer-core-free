@@ -121,7 +121,8 @@ public class NakamaApi : SingletonBehaviour<NakamaApi>
 
         if (resp.isNetworkError || resp.isHttpError)
         {
-            throw new System.EntryPointNotFoundException(resp.error);
+            Debug.Log("Server seems offline. Please close and try again.");
+            //throw new System.EntryPointNotFoundException(resp.error);
         }
         else
         {
