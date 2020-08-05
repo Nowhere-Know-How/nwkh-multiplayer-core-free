@@ -21,8 +21,8 @@ This code has external dependencies. Install these first by following the instru
         - Secret Key
 
 ## Run Instructions
-- Build -> Development
-- Run -> Server -> Start Server
+- Toolbar -> Build -> Development
+- Toolbar -> Run -> Server -> Start Server
 - Set Master Scene to server discovery scene from File -> Scene Autoload -> Select Master Scene
 - Click Play in editor
 - Open Build and Run Game
@@ -39,9 +39,9 @@ This code has external dependencies. Install these first by following the instru
 - Server discovery
 - Register new accounts
 - Login to game with email and credentials
-- Multiplayer Movement
-- Multiplayer Scene Changing
-- Persistent Scene Instancing
+- Multiplayer movement
+- Multiplayer scene changing
+- Persistent scene instancing
 - Logout
-- Player Location Save on Logout
-- Voice Communication based on scene.
+- Player Location Save on logout
+- Voice Communication based on scene
