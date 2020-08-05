@@ -10,7 +10,6 @@ Server/data/cockroach/*-addr
 Server/data/	
 Server/data/cockroach/
 Server/data/cockroach/logs/
-Assets/Vivox/Plugins/
 
 # This .gitignore file should be placed at the root of your Unity project directory
 #
