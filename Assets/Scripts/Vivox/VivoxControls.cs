@@ -7,6 +7,8 @@ using System.Linq;
 
 public class VivoxControls : MonoBehaviour
 {
+    public bool demo = false;
+
     VivoxVoiceManager _vivoxVoiceManager;
     VivoxNetworkManager _vivoxNetworkManager;
     string _currentChannel = null;
@@ -15,6 +17,10 @@ public class VivoxControls : MonoBehaviour
     {
         _vivoxVoiceManager = GetComponentInChildren<VivoxVoiceManager>();
         _vivoxNetworkManager = GetComponentInChildren<VivoxNetworkManager>();
+        if (demo)
+            return;
+
+        Login();
     }
 
     public void JoinLobbyChannel(string channelName)
@@ -100,6 +106,9 @@ public class VivoxControls : MonoBehaviour
 
     void Update()
     {
+        if (!demo)
+            return;
+
         if (Input.GetKeyDown(KeyCode.A))
         {
             JoinLobbyChannel("Alpha");

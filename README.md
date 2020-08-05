@@ -24,13 +24,18 @@ This code has external dependencies. Install these first by following the instru
         - Secret Key
 
 ## Run Instructions
-- Toolbar -> Build -> Development
-- Toolbar -> Run -> Server -> Start Server
-- Set Master Scene to server discovery scene from File -> Scene Autoload -> Select Master Scene
-- Click Play in editor
-- Open Build and Run Game
-- Create accounts
-- Log in
+- Start Server
+    - Toolbar -> Run -> Server -> Start Server
+- Build Client
+    - Toolbar -> Build -> Development
+- Configure Unity Editor to start Play Mode with initial server discovery scene
+    - File -> Scene Autoload -> Select Master Scene -> _ServerDiscovery
+- Run Client A
+    - Click Play in Editor
+- Run Client B
+    - Open Build and Run Game
+- Create accounts in both clients
+- Log in to separate accounts in both clients
 
 ## Architecture
 <p align="center">

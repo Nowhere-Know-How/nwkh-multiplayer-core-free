@@ -121,6 +121,75 @@ NavMeshSettings:
     debug:
       m_Flags: 0
   m_NavMeshData: {fileID: 0}
+--- !u!1001 &104665385
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 229069656874861736, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -4.4276757
+      objectReference: {fileID: 0}
+    - target: {fileID: 229069656874861736, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 229069656874861736, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229069656874861736, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229069656874861736, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229069656874861736, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229069656874861736, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 229069656874861736, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 229069656874861736, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229069656874861736, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229069656874861736, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 229069656874861737, guid: b69cd4998c789594e9ed42d1b397f39d,
+        type: 3}
+      propertyPath: m_Name
+      value: Vivox
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: b69cd4998c789594e9ed42d1b397f39d, type: 3}
 --- !u!1 &122261525
 GameObject:
   m_ObjectHideFlags: 0
@@ -173,7 +242,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 332995874}
-  - component: {fileID: 332995876}
   - component: {fileID: 332995875}
   m_Layer: 0
   m_Name: Client2ClientRPC
@@ -181,7 +249,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &332995874
 Transform:
   m_ObjectHideFlags: 0
@@ -206,18 +274,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 999a4a88dc6988440ba3e1a0d5bd4939, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &332995876
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 332995873}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b1c0ae6325f0a40a19ded7f6d505cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &573882058
@@ -275,7 +331,6 @@ GameObject:
   m_Component:
   - component: {fileID: 723225848}
   - component: {fileID: 723225849}
-  - component: {fileID: 723225850}
   m_Layer: 0
   m_Name: NakamaGroups
   m_TagString: Untagged
@@ -307,17 +362,5 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: bf45b24ebb14a4f41a0f193ac513288c, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &723225850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 723225847}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 47b1c0ae6325f0a40a19ded7f6d505cd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
