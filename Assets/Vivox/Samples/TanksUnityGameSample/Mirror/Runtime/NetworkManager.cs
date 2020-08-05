@@ -29,10 +29,10 @@ namespace Mirror
         [FormerlySerializedAs("m_ShowDebugMessages")] public bool showDebugMessages;
 
         [Scene]
-        [FormerlySerializedAs("m_OfflineScene"), HideInInspector] public string offlineScene = "";
+        [FormerlySerializedAs("m_OfflineScene")] public string offlineScene = "";
 
         [Scene]
-        [FormerlySerializedAs("m_OnlineScene"), HideInInspector] public string onlineScene = "";
+        [FormerlySerializedAs("m_OnlineScene")] public string onlineScene = "";
 
         [Header("Network Info")]
         // transport layer
@@ -40,16 +40,12 @@ namespace Mirror
         [FormerlySerializedAs("m_NetworkAddress")] public string networkAddress = "localhost";
         [FormerlySerializedAs("m_MaxConnections")] public int maxConnections = 4;
 
-        // [Header("Spawn Info")]
-        // [FormerlySerializedAs("m_PlayerPrefab")] 
-        [HideInInspector]
-        public GameObject playerPrefab;
-        [FormerlySerializedAs("m_AutoCreatePlayer"), HideInInspector] 
-        public bool autoCreatePlayer = true;
-        [FormerlySerializedAs("m_PlayerSpawnMethod"), HideInInspector] 
-        public PlayerSpawnMethod playerSpawnMethod;
+        [Header("Spawn Info")]
+        [FormerlySerializedAs("m_PlayerPrefab")] public GameObject playerPrefab;
+        [FormerlySerializedAs("m_AutoCreatePlayer")] public bool autoCreatePlayer = true;
+        [FormerlySerializedAs("m_PlayerSpawnMethod")] public PlayerSpawnMethod playerSpawnMethod;
 
-        [FormerlySerializedAs("m_SpawnPrefabs"), HideInInspector]
+        [FormerlySerializedAs("m_SpawnPrefabs"),HideInInspector]
         public List<GameObject> spawnPrefabs = new List<GameObject>();
 
         public static List<Transform> startPositions = new List<Transform>();
@@ -78,7 +74,7 @@ namespace Mirror
         // virtual so that inheriting classes' Awake() can call base.Awake() too
         public virtual void Awake()
         {
-            //Debug.Log("Thank you for using Mirror! https://mirror-networking.com");
+            Debug.Log("Thank you for using Mirror! https://mirror-networking.com");
 
             // Set the networkSceneName to prevent a scene reload
             // if client connection to server fails.
@@ -119,10 +115,7 @@ namespace Mirror
                 }
                 if (LogFilter.Debug) Debug.Log("NetworkManager created singleton (DontDestroyOnLoad)");
                 singleton = this;
-                //if (Application.isPlaying)
-                //{ 
-                //    DontDestroyOnLoad(gameObject); 
-                //}
+                if (Application.isPlaying) DontDestroyOnLoad(gameObject);
             }
             else
             {

@@ -40,12 +40,12 @@ namespace Mirror
         {
             Init();
             DrawDefaultInspector();
-            //EditorGUI.BeginChangeCheck();
-            //spawnList.DoLayoutList();
-            //if (EditorGUI.EndChangeCheck())
-            //{
-            //    serializedObject.ApplyModifiedProperties();
-            //}
+            EditorGUI.BeginChangeCheck();
+            spawnList.DoLayoutList();
+            if (EditorGUI.EndChangeCheck())
+            {
+                serializedObject.ApplyModifiedProperties();
+            }
         }
 
         static void DrawHeader(Rect headerRect)

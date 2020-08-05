@@ -56,6 +56,8 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 229069656874861736}
+  - component: {fileID: 931122497}
+  - component: {fileID: 931122499}
   m_Layer: 0
   m_Name: Vivox
   m_TagString: Untagged
@@ -79,6 +81,30 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &931122497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229069656874861737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 47b1c0ae6325f0a40a19ded7f6d505cd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &931122499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 229069656874861737}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 86a97c88a04e3954da4cbece780994d7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &229069657097042345
 GameObject:
   m_ObjectHideFlags: 0
@@ -151,6 +177,7 @@ MonoBehaviour:
   NoDelay: 1
   serverMaxMessageSize: 16384
   clientMaxMessageSize: 16384
+  showDebugMessages: 0
 --- !u!114 &229069657097042344
 MonoBehaviour:
   m_ObjectHideFlags: 0

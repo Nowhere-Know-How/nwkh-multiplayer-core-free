@@ -64,6 +64,7 @@ public class LoginScreenUI : MonoBehaviour
         LoginScreen.SetActive(true);
         LoginButton.interactable = true;
         _evtSystem.SetSelectedGameObject(LoginButton.gameObject, null);
+
     }
 
     private void HideLoginUI()

@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/_Scenes/Dev/VivoxDemo.unity
+    path: Assets/Vivox/Samples/TanksUnityGameSample/Scenes/MainScene.unity
+    guid: dbc457e6df4234749aff8bd5ffa028ef
+  - enabled: 1
+    path: Assets/_Scenes/Dev/VivoxDemoHeadless.unity
     guid: e42e5844b66d8c64b8bf6f4430c14395
   - enabled: 1
     path: Assets/_Scenes/_ServerDiscovery.unity

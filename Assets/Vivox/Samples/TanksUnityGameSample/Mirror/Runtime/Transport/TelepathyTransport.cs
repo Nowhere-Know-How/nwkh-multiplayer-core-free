@@ -27,8 +27,6 @@ namespace Mirror
         [Tooltip("Protect against allocation attacks by keeping the max message size small. Otherwise an attacker host might send multiple fake packets with 2GB headers, causing the connected clients to run out of memory after allocating multiple large packets.")]
         [FormerlySerializedAs("MaxMessageSize")] public int clientMaxMessageSize = 16 * 1024;
 
-        public bool showDebugMessages = false;
-
         protected Telepathy.Client client = new Telepathy.Client();
         protected Telepathy.Server server = new Telepathy.Server();
 
@@ -50,7 +48,7 @@ namespace Mirror
             // by simple eating the first one before the server starts
             Telepathy.Server.NextConnectionId();
 
-            if (showDebugMessages) Debug.Log("TelepathyTransport initialized!");
+            Debug.Log("TelepathyTransport initialized!");
         }
 
         // client

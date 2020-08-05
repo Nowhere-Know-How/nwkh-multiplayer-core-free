@@ -104,7 +104,7 @@ public class VivoxVoiceManager : MonoBehaviour
                     }
                 }
                 // Make instance persistent even if its already in the scene
-                //DontDestroyOnLoad(m_Instance.gameObject);
+                DontDestroyOnLoad(m_Instance.gameObject);
                 return m_Instance;
             }
         }
@@ -154,11 +154,7 @@ public class VivoxVoiceManager : MonoBehaviour
 
     private void Start()
     {
-        if (_tokenIssuer == "brando8361-my97-dev")
-        {
-            Debug.LogWarning("TEMPORARY VIVOX KEYS DETECTED. Create a developer account at https://developer.vivox.com/ to request your own free keys");
-        }
-        if (_serverUri.ToString() == "https://GETFROMPORTAL.www.vivox.com/api2" ||
+		if (_serverUri.ToString() == "https://GETFROMPORTAL.www.vivox.com/api2" ||
 	        _domain == "GET VALUE FROM VIVOX DEVELOPER PORTAL" ||
 	        _tokenKey == "GET VALUE FROM VIVOX DEVELOPER PORTAL" ||
 	        _tokenIssuer == "GET VALUE FROM VIVOX DEVELOPER PORTAL")
