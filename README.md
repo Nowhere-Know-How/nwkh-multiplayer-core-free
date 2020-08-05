@@ -8,7 +8,7 @@
 This code has external dependencies. Install these first by following the instructions in the links below.
 - [Unity](https://unity.com/)
 - [Docker](https://www.docker.com/get-started)
-- Install [Vivox](https://assetstore.unity.com/packages/tools/audio/vivox-voice-and-text-chat-148188) from the Asset Store through Unity
+- Install [Vivox for Unity](https://assetstore.unity.com/packages/tools/audio/vivox-voice-and-text-chat-148188) from the Asset Store through Unity
     - Verify installation by checking that the Assets/Vivox/Plugins directory is not empty.
 
 ## Get your own keys and credentials
