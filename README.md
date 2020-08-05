@@ -30,10 +30,9 @@ This code has external dependencies. Install these first by following the instru
 - Log in
 
 ## Architecture
-- Incoming Miro pictures
-    - Unity
-    - Nakama
-    - Vivox
+<p align="center">
+    <img width="1159" height="686" src="Documentation/images/Architecture.png">
+</p>
 
 ## Features
 - Server discovery
