@@ -9,7 +9,7 @@ This repository is a multiplayer game framework composed of free assets and tool
 
 ## Set up
 This code has external dependencies. Install these first by following the instructions in the links below.
-- [Unity](https://unity.com/)
+- [Unity 2019.4.5f1](https://unity.com/)
 - [Docker](https://www.docker.com/get-started)
 - Install [Vivox for Unity](https://assetstore.unity.com/packages/tools/audio/vivox-voice-and-text-chat-148188) from the Asset Store through Unity
     - Verify installation by checking that the Assets/Vivox/Plugins directory contains dll libraries.
