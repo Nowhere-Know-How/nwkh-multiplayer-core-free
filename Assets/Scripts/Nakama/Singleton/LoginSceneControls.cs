@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class LoginSceneControls : MonoBehaviour
 {
-    public string firstSceneOnNewAccount = "Kerfuffle";
+    public string firstSceneOnNewAccount = "FirstScene";
     public string mainMenuScene = "1-MainMenu";
     NakamaApi nakama;
 

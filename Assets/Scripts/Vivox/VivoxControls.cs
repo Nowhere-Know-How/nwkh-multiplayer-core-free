@@ -12,14 +12,17 @@ public class VivoxControls : MonoBehaviour
     public bool demo = false;
 
     string _sceneName;
-    VivoxVoiceManager _vivoxVoiceManager;
-    VivoxNetworkManager _vivoxNetworkManager;
+    public VivoxVoiceManager _vivoxVoiceManager;
+    public VivoxNetworkManager _vivoxNetworkManager;
     string _currentChannel = null;
+
+    private void Awake()
+    {
+        _vivoxVoiceManager = VivoxVoiceManager.Instance;
+    }
 
     private void Start()
     {
-        _vivoxVoiceManager = GetComponentInChildren<VivoxVoiceManager>();
-        _vivoxNetworkManager = GetComponentInChildren<VivoxNetworkManager>();
         if (demo)
             return;
 
@@ -36,7 +39,7 @@ public class VivoxControls : MonoBehaviour
 
     void JoinChannelBySceneName()
     {
-        if (_vivoxVoiceManager.LoginState == LoginState.LoggedIn)
+        if (_vivoxVoiceManager && _vivoxVoiceManager.LoginState == LoginState.LoggedIn)
         {
             JoinLobbyChannel(_sceneName);
         }
@@ -114,7 +117,6 @@ public class VivoxControls : MonoBehaviour
         }
         catch (InvalidOperationException e)
         {
-            _vivoxVoiceManager.init();
             Invoke("Login", 0.1f);
         }
     }

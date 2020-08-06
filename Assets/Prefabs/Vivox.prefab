@@ -105,6 +105,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 86a97c88a04e3954da4cbece780994d7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  demo: 0
+  _vivoxVoiceManager: {fileID: 229069656790138733}
+  _vivoxNetworkManager: {fileID: 229069657097042344}
 --- !u!1 &229069657097042345
 GameObject:
   m_ObjectHideFlags: 0
@@ -177,7 +180,6 @@ MonoBehaviour:
   NoDelay: 1
   serverMaxMessageSize: 16384
   clientMaxMessageSize: 16384
-  showDebugMessages: 0
 --- !u!114 &229069657097042344
 MonoBehaviour:
   m_ObjectHideFlags: 0

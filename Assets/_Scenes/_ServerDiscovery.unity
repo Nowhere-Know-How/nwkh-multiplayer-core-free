@@ -552,13 +552,13 @@ MonoBehaviour:
   m_margin: {x: 0, y: 0, z: -217.82013, w: 0}
   m_textInfo:
     textComponent: {fileID: 808277047}
-    characterCount: 19
+    characterCount: 0
     spriteCount: 0
-    spaceCount: 1
-    wordCount: 2
+    spaceCount: 0
+    wordCount: 0
     linkCount: 0
-    lineCount: 1
-    pageCount: 1
+    lineCount: 0
+    pageCount: 0
     materialCount: 1
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
@@ -612,7 +612,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c079376a86a83814ca918a7e078c9a60, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  firstSceneOnNewAccount: Kerfuffle
+  firstSceneOnNewAccount: FirstScene
   mainMenuScene: _Login
 --- !u!4 &1821970283
 Transform:
