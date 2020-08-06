@@ -1618,7 +1618,7 @@ MonoBehaviour:
   playerSpawnMethod: 0
   spawnPrefabs:
   - {fileID: 192454, guid: 008ecb1b70bec724fa2cd34255b0d8f8, type: 3}
-  LobbyChannelName: Alpha
+  LobbyChannelName: FirstScene
 --- !u!114 &632418370
 MonoBehaviour:
   m_ObjectHideFlags: 0

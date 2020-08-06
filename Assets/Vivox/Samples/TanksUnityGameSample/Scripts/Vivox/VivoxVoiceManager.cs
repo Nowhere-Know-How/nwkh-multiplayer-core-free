@@ -166,6 +166,12 @@ public class VivoxVoiceManager : MonoBehaviour
         _client.Initialize();
     }
 
+    public void init()
+    {
+        _client.Uninitialize();
+        _client.Initialize();
+    }
+
     private void OnApplicationQuit()
     {
         // Needed to add this to prevent some unsuccessful uninit, we can revisit to do better -carlo

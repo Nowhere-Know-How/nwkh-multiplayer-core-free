@@ -4,11 +4,14 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using VivoxUnity;
 using System.Linq;
+using UnityEngine.SceneManagement;
+using System;
 
 public class VivoxControls : MonoBehaviour
 {
     public bool demo = false;
 
+    string _sceneName;
     VivoxVoiceManager _vivoxVoiceManager;
     VivoxNetworkManager _vivoxNetworkManager;
     string _currentChannel = null;
@@ -21,10 +24,32 @@ public class VivoxControls : MonoBehaviour
             return;
 
         Login();
+        SceneManager.sceneLoaded += OnSceneLoad;
+        
     }
+
+    private void OnSceneLoad(Scene scene, LoadSceneMode mode)
+    {
+        _sceneName = scene.name;
+        JoinChannelBySceneName();
+    }
+
+    void JoinChannelBySceneName()
+    {
+        if (_vivoxVoiceManager.LoginState == LoginState.LoggedIn)
+        {
+            JoinLobbyChannel(_sceneName);
+        }
+        else
+        {
+            Invoke("JoinChannelBySceneName", 0.5f);
+        }
+    }
+
 
     public void JoinLobbyChannel(string channelName)
     {
+        Debug.Log("Attempting to join: " + channelName);
         if (_currentChannel != null)
         {
             return;
@@ -35,13 +60,16 @@ public class VivoxControls : MonoBehaviour
         if ((_vivoxVoiceManager && _vivoxVoiceManager.ActiveChannels.Count == 0)
             || lobbychannel == null)
         {
+            Debug.Log("I'm in");
             _vivoxVoiceManager.OnParticipantAddedEvent += VivoxVoiceManager_OnParticipantAddedEvent;
             _vivoxVoiceManager.JoinChannel(channelName, ChannelType.NonPositional, VivoxVoiceManager.ChatCapability.TextAndAudio);
         }
         else
         {
+            Debug.Log("Elsed");
             if (lobbychannel.AudioState == ConnectionState.Disconnected)
             {
+                Debug.Log("Elsed2");
                 // Ask for hosts since we're already in the channel and part added won't be triggered.
                 _vivoxNetworkManager.SendLobbyUpdate(VivoxNetworkManager.MatchStatus.Seeking);
 
@@ -78,7 +106,17 @@ public class VivoxControls : MonoBehaviour
 
     void Login()
     {
-        _vivoxVoiceManager.Login(Random.RandomRange(0, 1000).ToString());
+        Debug.Log("Logging in ");
+
+        try
+        {
+            _vivoxVoiceManager.Login(UnityEngine.Random.Range(0, 1000).ToString());
+        }
+        catch (InvalidOperationException e)
+        {
+            _vivoxVoiceManager.init();
+            Invoke("Login", 0.1f);
+        }
     }
 
     void Logout()
@@ -111,11 +149,11 @@ public class VivoxControls : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.A))
         {
-            JoinLobbyChannel("Alpha");
+            JoinLobbyChannel("FirstScene");
         }
         if (Input.GetKeyDown(KeyCode.S))
         {
-            LeaveAllChannels("Alpha", includeLobby: false);
+            LeaveAllChannels("FirstScene", includeLobby: false);
         }
         if (Input.GetKeyDown(KeyCode.Z))
         {
