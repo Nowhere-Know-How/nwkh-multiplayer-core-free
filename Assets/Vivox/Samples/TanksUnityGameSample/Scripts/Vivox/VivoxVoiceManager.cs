@@ -54,6 +54,7 @@ public class VivoxVoiceManager : MonoBehaviour
     #endregion
 
     #region Member Variables
+
     private Uri _serverUri
     {
         get => new Uri(_server);
@@ -117,6 +118,7 @@ public class VivoxVoiceManager : MonoBehaviour
     public IAudioDevices AudioInputDevices => _client.AudioInputDevices;
     public IAudioDevices AudioOutputDevices => _client.AudioOutputDevices;
 
+    public bool showDebugMessages = false;
     #endregion
 
     #region Properties
@@ -458,7 +460,8 @@ public class VivoxVoiceManager : MonoBehaviour
 
     private void VivoxLog(string msg)
     {
-        Debug.Log("<color=green>VivoxVoice: </color>: " + msg);
+        if (showDebugMessages)
+            Debug.Log("<color=green>VivoxVoice: </color>: " + msg);
     }
 
     private void VivoxLogError(string msg)

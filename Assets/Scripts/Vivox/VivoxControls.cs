@@ -33,6 +33,11 @@ public class VivoxControls : MonoBehaviour
 
     private void OnSceneLoad(Scene scene, LoadSceneMode mode)
     {
+        if (_currentChannel != null)
+        {
+            LeaveAllChannels();
+        }
+
         _sceneName = scene.name;
         JoinChannelBySceneName();
     }
@@ -84,6 +89,18 @@ public class VivoxControls : MonoBehaviour
         }
         // Do nothing, participant added will take care of this
     }
+
+    public void LeaveAllChannels()
+    {
+        if (_currentChannel == null)
+        {
+            return;
+        }
+
+        _currentChannel = null;
+        _vivoxVoiceManager.DisconnectAllChannels();
+    }
+
 
     public void LeaveAllChannels(string channelName, bool includeLobby = true)
     {
